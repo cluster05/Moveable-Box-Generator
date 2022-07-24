@@ -1,0 +1,12 @@
+<div
+  [id]="box.id"
+  style="position: absolute"
+  [style]="{ left: box.x + 'px', top: box.y + 'px', zIndex: box.zIndex }"
+  class="w-40 h-40 rounded cursor-pointer border-black"
+  [class]="[
+    box.color,
+    box.selected ? 'shadow-xl' : 'shadow',
+    box.selected ? 'border-2' : 'border-0'
+  ]"
+  (click)="select(box.id)"
+></div>

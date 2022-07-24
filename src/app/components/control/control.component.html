@@ -1,0 +1,26 @@
+<div class="w-96 p-4 h-screen overflow-y-scroll border">
+  <button
+    class="p-4 w-full rounded text-xl capitalize text-blue-50 bg-blue-400"
+    (click)="generateBox()"
+  >
+    generate
+  </button>
+  <div class="">
+    <ul>
+      <li
+        *ngFor="let box of boxes"
+        class="p-2 m-2 flex items-center justify-between cursor-pointer border-gray-500 rounded"
+        [class]="[box.selected ? 'border' : 'border-0']"
+      >
+        <div class="w-10 h-10 rounded shadow" [class]="box.color"></div>
+        <div class="ml-4">{{ box.id }}</div>
+        <div
+          (click)="$event.stopPropagation(); delete(box.id)"
+          class="w-5 h-5 p-4 pt-3 text-xl rounded bg-red-500 text-red-100 flex items-center justify-center"
+        >
+          <span>x</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

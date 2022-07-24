@@ -23,6 +23,7 @@ Copy Moveable-Box-Generator with npm
 ```bash
   git clone https://github.com/cluster05/Moveable-Box-Generator.git
   cd Moveable-Box-Generator
+  npm install
   ng serve
 ```
 
